@@ -71,4 +71,8 @@ document.addEventListener('keydown', (event) => {
 function backspace() {
     currentInput = currentInput.slice(0, -1);
     display.value = currentInput;
+}
+
+function copyResult() {
+    navigator.clipboard.writeText(display.value).then(() => alert('Copied!'));
 };
