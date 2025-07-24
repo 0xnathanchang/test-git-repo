@@ -66,11 +66,12 @@ button:hover {
     margin-top: 20px;
     max-height: 150px;
     overflow-y: auto;
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
     font-size: 14px;
     color: #666;
-    transition: color 0.3s, border-top-color 0.3s;
+    transition: color 0.3s, border-color 0.3s;
 }
 
 #theme-toggle {
