@@ -26,12 +26,13 @@
             <button onclick="appendToDisplay('.')">.</button>
             <button onclick="clearDisplay()">C</button>
             <button onclick="calculate('+')">+</button>
-            <button onclick="calculate('**')">^</button> <!-- Power -->
-            <button onclick="calculate('Math.sqrt(')">√</button> <!-- Square root -->
-            <button onclick="calculate('/100')">%</button> <!-- Percentage -->
+            <button onclick="calculate('**')">^</button>
+            <button onclick="calculate('Math.sqrt(')">√</button>
+            <button onclick="calculate('/100')">%</button>
+            <button id="theme-toggle" onclick="toggleTheme()">🌙</button> <!-- Moved here -->
             <button class="equal" onclick="evaluateExpression()">=</button>
         </div>
-        <div id="history" class="history"></div> <!-- History log -->
+        <div id="history" class="history"></div>
     </div>
     <script src="script.js"></script>
 </body>

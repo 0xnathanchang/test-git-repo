@@ -1,5 +1,7 @@
 let display = document.getElementById('display');
+let historyDiv = document.getElementById('history');
 let currentInput = '';
+let history = [];
 
 function appendToDisplay(value) {
     currentInput += value;
@@ -18,10 +20,21 @@ function calculate(operator) {
 
 function evaluateExpression() {
     try {
-        currentInput = eval(currentInput).toString();
+        let result = eval(currentInput);
+        if (isNaN(result) || !isFinite(result)) {
+            throw new Error('Invalid calculation');
+        }
+        addToHistory(currentInput + ' = ' + result);
+        currentInput = result.toString();
         display.value = currentInput;
     } catch (error) {
         display.value = 'Error';
         currentInput = '';
     }
+}
+
+function addToHistory(entry) {
+    history.push(entry);
+    if (history.length > 5) history.shift(); // Keep last 5 entries
+    historyDiv.innerHTML = history.map(h => `<div>${h}</div>`).join('');
 }

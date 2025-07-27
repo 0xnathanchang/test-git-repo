@@ -6,6 +6,7 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     font-family: Arial, sans-serif;
+    transition: background-color 0.3s;
 }
 
 .calculator {
@@ -13,6 +14,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 #display {
@@ -25,6 +27,7 @@ body {
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .buttons {
@@ -40,6 +43,7 @@ button {
     background-color: #e0e0e0;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
@@ -47,7 +51,7 @@ button:hover {
 }
 
 .equal {
-    grid-column: span 2; /* Adjust span for layout */
+    grid-column: span 4; /* Changed to full width */
     background-color: #4caf50;
     color: white;
 }
@@ -64,4 +68,49 @@ button:hover {
     padding-top: 10px;
     font-size: 14px;
     color: #666;
+    transition: color 0.3s, border-top-color 0.3s;
+}
+
+#theme-toggle {
+    background: none; /* Keeps it subtle */
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+body.dark {
+    background-color: #121212;
+}
+
+.calculator.dark {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+#display.dark {
+    background-color: #333;
+    color: #fff;
+    border-color: #444;
+}
+
+button.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+button.dark:hover {
+    background-color: #444;
+}
+
+.equal.dark {
+    background-color: #2196f3;
+}
+
+.equal.dark:hover {
+    background-color: #1e88e5;
+}
+
+.history.dark {
+    color: #bbb;
+    border-top-color: #444;
 }
