@@ -14,27 +14,27 @@
             <button onclick="appendToDisplay('8')">8</button>
             <button onclick="appendToDisplay('9')">9</button>
             <button onclick="calculate('/')">/</button>
+            <button onclick="backspace()">←</button> <!-- Moved for better flow -->
             <button onclick="appendToDisplay('4')">4</button>
             <button onclick="appendToDisplay('5')">5</button>
             <button onclick="appendToDisplay('6')">6</button>
             <button onclick="calculate('*')">*</button>
+            <button onclick="clearDisplay()">C</button>
             <button onclick="appendToDisplay('1')">1</button>
             <button onclick="appendToDisplay('2')">2</button>
             <button onclick="appendToDisplay('3')">3</button>
             <button onclick="calculate('-')">-</button>
+            <button onclick="calculate('+')">+</button>
             <button onclick="appendToDisplay('0')">0</button>
             <button onclick="appendToDisplay('.')">.</button>
-            <button onclick="clearDisplay()">C</button>
-            <button onclick="backspace()">←</button>
-            <button onclick="calculate('+')">+</button>
             <button onclick="calculate('**')">^</button>
             <button onclick="calculate('Math.sqrt(')">√</button>
             <button onclick="calculate('/100')">%</button>
-            <button id="theme-toggle" onclick="toggleTheme()">🌙</button> <!-- Moved here -->
+            <button id="theme-toggle" onclick="toggleTheme()">🌙</button>
             <button class="equal" onclick="evaluateExpression()">=</button>
         </div>
         <div id="history" class="history"></div>
-        <button onclick="copyResult()">Copy Result</button>
+        <button onclick="copyResult()" class="copy-btn">Copy Result</button> <!-- Integrated -->
     </div>
     <script src="script.js"></script>
 </body>
