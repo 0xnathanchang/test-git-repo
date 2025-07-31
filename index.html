@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Calculator</title>
+    <title>Enhanced Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -26,8 +26,12 @@
             <button onclick="appendToDisplay('.')">.</button>
             <button onclick="clearDisplay()">C</button>
             <button onclick="calculate('+')">+</button>
+            <button onclick="calculate('**')">^</button> <!-- Power -->
+            <button onclick="calculate('Math.sqrt(')">√</button> <!-- Square root -->
+            <button onclick="calculate('/100')">%</button> <!-- Percentage -->
             <button class="equal" onclick="evaluateExpression()">=</button>
         </div>
+        <div id="history" class="history"></div> <!-- History log -->
     </div>
     <script src="script.js"></script>
 </body>
